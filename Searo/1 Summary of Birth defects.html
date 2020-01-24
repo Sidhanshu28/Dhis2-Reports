@@ -94,9 +94,11 @@
         text-align: center;
     }
 </style>
-<p><strong style="color:blue;">Newborn and Birth Defects Database Progress Report </strong><strong> </strong><br>
+<div class="text-center mb-2"><strong style="color:blue;">Newborn and Birth Defects Database Progress Report
+    </strong><strong> </strong><br>
     <span id="timeStamp"></span> <br>
-    <strong>BIRDEM, Bangladesh</strong><strong> </strong></p>
+    <b style="display:inline-block">BIRDEM,
+        <p id="orgUnitName" style="display:inline-block"></p></b></div>
 <p><strong>Overview of data reported to NBBD on a monthly basis</strong><strong> </strong><strong> </strong><br>
     Table 1: Numerators and denominators submitted by your hospital </p>
 <center> Start Date :
@@ -147,6 +149,8 @@
 
             var selOrgUnitLevel = dhis2.report.organisationUnitHierarchy.length;
             var orgUnit = dhis2.report.organisationUnit;
+            var orgUnitName = dhis2.report.organisationUnit.name;
+            document.getElementById('orgUnitName').innerHTML = orgUnitName;
             var orgUnitChildren = dhis2.report.organisationUnitChildren;
             var selOrgUnitLevel = dhis2.report.organisationUnitHierarchy.length;
             var count = 0;
@@ -448,7 +452,7 @@
         </table>
     </div>
     <div class="col-6">
-        <div id="container"></div>
+        <div id="container" style="width:400px"></div>
     </div>
 </div>
 
@@ -644,7 +648,7 @@
         </td>
         <td width="18.1600%" valign="bottom" nowrap>
             <b>
-                <p align="center" class="jzcfS0qBDrz laKEtChl8XX table3_var table3_var_t" >0</p>
+                <p align="center" class="jzcfS0qBDrz laKEtChl8XX table3_var table3_var_t">0</p>
             </b>
         </td>
         <td width="11.6800%" valign="bottom" nowrap>
